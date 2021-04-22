@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded;
+}
+header{
+    margin-top: 0px !important;
+}
+.opacity-40{
+    opacity: 0.4 !important;
+
+}
+
+
+@tailwind utilities;

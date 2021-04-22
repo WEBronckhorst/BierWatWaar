@@ -135,7 +135,7 @@ $organizations = organization::all();
         function prijs($nummer){
            return number_format($nummer, 2, ',', '');
         }
-        $organizations = organization::all();
+        $organizations = DB::table('organization')->all();
 
         $event = Events::where('id', $id)->first();
         // dd($event);

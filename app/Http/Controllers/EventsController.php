@@ -1,16 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Support\Facades\DB;
+use App\Models\organization;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Str;
-use App\Models\organization;
+
+
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
-
 
 class EventsController extends Controller
 {
@@ -43,7 +42,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        $organizations = DB::table('organization')->all();
+$organizations = organization::all();
 
         return view('admin.event.new', compact('organizations'));
     }
@@ -137,7 +136,7 @@ class EventsController extends Controller
         function prijs($nummer){
            return number_format($nummer, 2, ',', '');
         }
-        $organizations = DB::table('organization')->all();
+        $organizations = organization::all();
 
         $event = Events::where('id', $id)->first();
         // dd($event);

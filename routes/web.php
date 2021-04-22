@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('admin/dashboard', function
 Route::middleware(['auth:sanctum', 'verified'])->
 get('/dashboard/page', [PageController::class, 'index'])->name('dashboard.page.index'); // create, 'PageController@index')->name('dashboard_page_index');
 
-Route::domain('{subdomain}.bierwatwaar.test')->group(function () {
+Route::domain('{subdomain}.wetools.nl')->group(function () {
      Route::get('/', [OrganizationController::class, 'show'])->name('organization');
      Route::get('/{slug}', [EventsController::class, 'show'])->name('event.show');
 

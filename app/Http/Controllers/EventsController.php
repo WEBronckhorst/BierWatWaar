@@ -44,9 +44,9 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(organization)
     {
-$organizations = organization::all();
+$organizations = "";
 
         return view('admin.event.new', compact('organizations'));
     }

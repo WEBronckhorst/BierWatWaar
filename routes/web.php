@@ -16,7 +16,9 @@ use App\Http\Controllers\OrganizationController;
 */
 
 
-
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard', function () {
+    return view('dashboard');
+});
 Route::middleware(['auth:sanctum', 'verified'])->get('admin/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

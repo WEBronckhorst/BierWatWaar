@@ -15,14 +15,14 @@
       </button>
     </div>
     <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
-        <a href="{{ route('home') }}" class="flex">
+        <a href="http://wetools.nl" class="flex">
             <span class="sr-only">Bier Wat Waar</span>
             <img class="h-8 w-auto sm:h-10" src="{{ url('/img/logo/Logo-Shadow.png') }}" alt="Bier wat waar">
           </a>
       <nav class="flex space-x-10">
         <div class="relative">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <a href="{{ route('home') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          <a href="http://wetools.nl" class="text-base font-medium text-gray-500 hover:text-gray-900">
             Agenda
           </a>
 
@@ -73,7 +73,7 @@
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-                <a href="{{ url('/dashboard') }}" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-groen-dark hover:bg-groen-dark">Dashboard</a>
+                <a href="http://wetools.nl" class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-groen-dark hover:bg-groen-dark">Dashboard</a>
             @else
                 <a href="{{ route('login') }}" class="text-base font-medium text-gray-500 hover:text-gray-900">Login</a>
 

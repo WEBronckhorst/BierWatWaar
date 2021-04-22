@@ -32,7 +32,7 @@ Route::domain('{subdomain}.wetools.nl')->group(function () {
 
 });
 
-    Route::get('http://wetools.nl', [EventsController::class, 'show_index'])->name('home');
+    Route::get('/', [EventsController::class, 'show_index'])->name('home');
 
 
 

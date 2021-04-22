@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Auth;
@@ -9,6 +10,7 @@ use Illuminate\Support\Str;
 use App\Models\organization;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+
 
 class EventsController extends Controller
 {

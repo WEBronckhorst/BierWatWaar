@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\organization;
+
 use App\Models\Events;
 use Illuminate\Http\Request;
 use Auth;
@@ -10,6 +12,8 @@ use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+use App\Models\organization;
+
 
 class EventsController extends Controller
 {

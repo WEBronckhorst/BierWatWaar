@@ -79,7 +79,8 @@ class OrganizationController extends Controller
      */
     public function show($slug, Organization $organization)
     {
-        $organization = organization::where('slug', $slug)->firstOrFail()->first();
+        $organization = organization::where('slug', $slug)->first();
+
         $events = Events::where('organization_id', $organization->id)->orderBy('stard_datum', 'ASC')->orderBy('stard_tijd', 'ASC')->paginate(10);
 
         return view('organization.show', compact('organization', 'events'));

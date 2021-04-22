@@ -41,7 +41,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-$organizations = organization::all();
+        $organizations = DB::table('organization')->all();
 
         return view('admin.event.new', compact('organizations'));
     }

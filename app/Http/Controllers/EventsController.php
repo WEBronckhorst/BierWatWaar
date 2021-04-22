@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Organization;
 
 use App\Models\Events;
 use Illuminate\Http\Request;
@@ -12,8 +12,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
-use App\Models\organization;
-
+use App\Models\organizatio;
 
 class EventsController extends Controller
 {
@@ -44,9 +43,9 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(organization)
+    public function create( )
     {
-$organizations = "";
+$organizations = Organization::all();
 
         return view('admin.event.new', compact('organizations'));
     }
